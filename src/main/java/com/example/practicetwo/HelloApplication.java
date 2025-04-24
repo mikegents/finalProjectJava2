@@ -14,8 +14,7 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
 
 
-
-
+        System.out.println("Hello World");
         Label helloWorldLabel = new Label("Hello World");
         Scene scene = new Scene(helloWorldLabel, 320, 240);
         stage.setTitle("Hello!");
