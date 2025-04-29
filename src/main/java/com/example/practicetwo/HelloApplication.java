@@ -15,6 +15,7 @@ public class HelloApplication extends Application {
 
         QuestionBank myBank = new QuestionBank();
         myBank.readMCQ("src/main/resources/mcq.txt");
+        myBank.printQuestions();
 
 
         System.out.println("Hello World");
