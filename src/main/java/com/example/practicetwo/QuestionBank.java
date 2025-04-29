@@ -37,7 +37,9 @@ public class QuestionBank {
             Scanner sc = new Scanner(fileObj);
 
             while (sc.hasNextLine()) {
-                String line = sc.nextLine();
+                String line = sc.nextLine().trim();
+                String[] items = line.split(".");
+                String questionText = items[1];
                 System.out.println(line);
             }
         } catch (FileNotFoundException e) {
