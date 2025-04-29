@@ -13,6 +13,9 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
+        QuestionBank myBank = new QuestionBank();
+        myBank.readMCQ("src/main/resources/mcq.txt");
+
 
         System.out.println("Hello World");
         Label helloWorldLabel = new Label("Hello World");
