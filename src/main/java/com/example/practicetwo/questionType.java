@@ -1,6 +1,6 @@
 package com.example.practicetwo;
 
 public enum questionType {
-    MCQ
-
+    MCQ,
+    TFQ
 }

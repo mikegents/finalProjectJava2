@@ -9,14 +9,21 @@ import javafx.stage.Stage;
 import javafx.scene.control.Label;
 
 import java.io.IOException;
+import java.util.LinkedList;
+
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
         QuestionBank myBank = new QuestionBank();
         myBank.readMCQ("src/main/resources/mcq.txt");
-        myBank.printQuestions();
+        myBank.readTFQ("src/main/resources/tfq.txt");
 
+
+        int[] indxes = {11, 0, 5};
+        LinkedList<Question> exam = myBank.selectRandomQuestion(indxes);
+        Exam myExam = new Exam(exam);
+        myExam.printAllQuestions();
 
         System.out.println("Hello World");
         Label helloWorldLabel = new Label("Hello World");

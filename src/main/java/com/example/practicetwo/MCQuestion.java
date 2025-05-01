@@ -24,11 +24,20 @@ public class MCQuestion extends Question {
         options.addAll(optionsParam);
     }
 
+
+
     public LinkedList<String>getOptions() {
         return options;
     }
 
     public void setOptions(LinkedList<String>optionsParam) {
         this.options = new LinkedList<>();
+        this.options.addAll(optionsParam);
+    }
+
+
+    @Override
+    public String toString() {
+        return "MCQuestion{" + this.getQuestionText()+"\n" + "Options=" + options + "\nANS " + this.getCorrectAnswer();
     }
 }
