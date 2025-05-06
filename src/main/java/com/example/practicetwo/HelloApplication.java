@@ -1,20 +1,18 @@
 package com.example.practicetwo;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
-import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.image.Image;
+import javafx.scene.control.Button;
 
-import java.awt.*;
 import java.io.IOException;
 import java.util.LinkedList;
 
@@ -50,7 +48,9 @@ public class HelloApplication extends Application {
         root.getChildren().add(hboxGrade);
         root.getChildren().add(new Separator());
 
-
+        HBox hBoxButtons = buildFooter();
+        hBoxButtons.setAlignment(Pos.CENTER);
+        root.getChildren().add(hBoxButtons);
 
 
         Label helloWorldLabel = new Label("Hello World");
@@ -74,8 +74,13 @@ public class HelloApplication extends Application {
         return hboxBanner;
     }
 
-    private Hbox buildFooter() {
-
+    private HBox buildFooter() {
+        HBox hboxFooter = new HBox();
+        Button buttonClear = new Button("Clear");
+        Button ButtonSave = new Button("Save");
+        Button buttonSubmit = new Button("Submit");
+        hboxFooter.getChildren().addAll(buttonClear, ButtonSave, buttonSubmit);
+        return hboxFooter;
     }
 
     private MenuBar buildMenuBar() {
