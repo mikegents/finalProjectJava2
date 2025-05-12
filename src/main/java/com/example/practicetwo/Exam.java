@@ -58,6 +58,11 @@ public class Exam {
         this.submittedAnswers.putAll(submittedAnswers);
     }
 
+    public void clear(){
+        this.questions.clear();
+        this.submittedAnswers.clear();
+    }
+
     public Exam(LinkedList<Question> questionList){
         this.questions = new HashMap<>();
         this.submittedAnswers = new HashMap<>();

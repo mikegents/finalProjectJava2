@@ -25,6 +25,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class HelloApplication extends Application {
     private Exam myExam;
+    private LinkedList<ToggleGroup> toggleGroups = new LinkedList<>();
     @Override
     public void start(Stage stage) throws IOException {
 
@@ -94,8 +95,13 @@ public class HelloApplication extends Application {
 
     public VBox buildTrueFalseQ(int questionNumber, TFQQuestion tfQuestion1){
         Label labelQuestionText = new Label(tfQuestion1.getQuestionText());
+        ToggleGroup toggleGroup = new ToggleGroup();
         RadioButton radioButtonTrue = new RadioButton("True ");
         RadioButton radioButtonFalse = new RadioButton("False");
+        radioButtonFalse.setToggleGroup(toggleGroup);
+        radioButtonTrue.setToggleGroup(toggleGroup);
+        toggleGroups.add(toggleGroup);
+        radioButtonTrue.setToggleGroup(toggleGroup);
         HBox hBox = new HBox(10, radioButtonTrue, radioButtonFalse);
         VBox vBox = new VBox(labelQuestionText, hBox);
         vBox.getChildren().add(new Separator());
@@ -108,11 +114,11 @@ public class HelloApplication extends Application {
 
         LinkedList<String> options = mcqQuestion.getOptions();
         ToggleGroup toggleGroup = new ToggleGroup();
+        toggleGroups.add(toggleGroup);
         for (String s : options){
             RadioButton radioButton = new RadioButton(s);
             radioButton.setToggleGroup(toggleGroup);
             vBox.getChildren().add(radioButton);
-
         }
         vBox.getChildren().add(new Separator());
         return vBox;
@@ -152,6 +158,10 @@ public class HelloApplication extends Application {
     }
 
     private void clearExamAnswers() {
+        for (ToggleGroup group : toggleGroups) {
+            group.selectToggle(null);
+        }
+        myExam.clear();
     }
 
     private MenuBar buildMenuBar() {
