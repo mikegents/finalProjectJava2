@@ -1,0 +1,86 @@
+/* ROOT background and font */
+.root {
+    -fx-background-color: #2e2e2e;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-text-fill: #f0f0f0;
+}
+
+/* Universal text fix */
+.label, .radio-button, .menu, .menu-item, .text-area, .button {
+    -fx-text-fill: #f0f0f0;
+}
+
+/* Labels */
+.label {
+    -fx-font-size: 11pt;
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: #444;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-padding: 7 14;
+    -fx-background-radius: 6;
+}
+
+.button:hover {
+    -fx-background-color: #666;
+}
+
+/* Radio buttons */
+.radio-button {
+    -fx-text-fill: #f0f0f0;
+    -fx-padding: 6;
+}
+
+/* ScrollPane */
+.scroll-pane {
+    -fx-background: #2e2e2e;
+    -fx-border-color: #444;
+    -fx-border-width: 1;
+}
+
+/* Text area (if used anywhere) */
+.text-area {
+    -fx-control-inner-background: #3a3a3a;
+    -fx-text-fill: #f0f0f0;
+    -fx-border-color: #555;
+    -fx-border-radius: 4;
+}
+
+/* MenuBar */
+.menu-bar {
+    -fx-background-color: #3a3a3a;
+}
+
+.menu {
+    -fx-background-color: transparent;
+    -fx-text-fill: #f0f0f0;
+}
+
+/* Context (dropdown) menus */
+.context-menu {
+    -fx-background-color: #3c3c3c;
+    -fx-border-color: #666;
+}
+
+.context-menu .menu-item {
+    -fx-text-fill: #f0f0f0;
+    -fx-background-color: #3c3c3c;
+}
+
+.context-menu .menu-item:hover {
+    -fx-background-color: #505050;
+}
+
+/* Separators */
+.separator {
+    -fx-background-color: #555;
+}
+
+/* Disable focus glow */
+* {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}

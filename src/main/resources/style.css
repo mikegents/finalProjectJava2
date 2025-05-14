@@ -1,0 +1,85 @@
+/* Root container */
+.root {
+    -fx-background-color: #f4f9fc;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-text-fill: #2e2e2e;
+}
+
+/* Labels */
+.label {
+    -fx-font-size: 11pt;
+    -fx-text-fill: #2e2e2e;
+    -fx-padding: 6 0 2 0;
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: #76bce7;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 7 14;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #5a9cc9;
+}
+
+/* Radio Buttons */
+.radio-button {
+    -fx-text-fill: #2e2e2e;
+    -fx-padding: 6;
+}
+
+/* ScrollPane */
+.scroll-pane {
+    -fx-background: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1;
+}
+
+/* Text areas */
+.text-area {
+    -fx-control-inner-background: #ffffff;
+    -fx-text-fill: #2e2e2e;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 4;
+}
+
+/* Menu bar */
+.menu-bar {
+    -fx-background-color: #b8def2;
+}
+
+.menu {
+    -fx-background-color: transparent;
+    -fx-text-fill: #1f1f1f;
+}
+
+/* Context (dropdown) menus */
+.context-menu {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #aaaaaa;
+}
+
+.context-menu .menu-item {
+    -fx-text-fill: #1f1f1f;
+    -fx-background-color: #ffffff;
+    -fx-padding: 6 12;
+}
+
+.context-menu .menu-item:hover {
+    -fx-background-color: #eeeeee;
+}
+
+/* Separators */
+.separator {
+    -fx-background-color: #dddddd;
+}
+
+/* Remove default focus glow */
+* {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}

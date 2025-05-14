@@ -7,6 +7,7 @@ public class Exam {
 
     HashMap<Integer, Question> questions;
     HashMap<Integer, String> submittedAnswers;
+    private int grade;
 
     public Exam() {
         this.questions = new HashMap<>();
@@ -20,7 +21,7 @@ public class Exam {
         this.submittedAnswers.putAll(submittedAnswers);
     }
 
-    public void clearQuestions(){
+    public void clearQuestions() {
         this.questions.clear();
         this.submittedAnswers.clear();
     }
@@ -33,8 +34,8 @@ public class Exam {
         return this.submittedAnswers.get(i);
     }
 
-    public void printAllQuestions(){
-        for(int key : questions.keySet()){
+    public void printAllQuestions() {
+        for (int key : questions.keySet()) {
             System.out.println(this.questions.get(key));
         }
 
@@ -44,10 +45,6 @@ public class Exam {
         return questions;
     }
 
-    public void setQuestions(HashMap<Integer, Question> questions) {
-        this.questions = new HashMap<>();
-        this.questions.putAll(questions);
-    }
 
     public HashMap<Integer, String> getSubmittedAnswers() {
         return submittedAnswers;
@@ -58,7 +55,7 @@ public class Exam {
         this.submittedAnswers.putAll(submittedAnswers);
     }
 
-    public Exam(LinkedList<Question> questionList){
+    public Exam(LinkedList<Question> questionList) {
         this.questions = new HashMap<>();
         this.submittedAnswers = new HashMap<>();
         int i = 1;
@@ -71,6 +68,16 @@ public class Exam {
 
     }
 
-    public void clear() {
+    public int getGrade() {
+        return grade;
+    }
+
+    public void setGrade(int grade) {
+        this.grade = grade;
+    }
+
+    public void clearGrade() {
+        this.grade = 0;
     }
 }
+
